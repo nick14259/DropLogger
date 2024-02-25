@@ -1,5 +1,7 @@
 package net.runelite.client.plugins.droplogger;
 
+import lombok.extern.slf4j.Slf4j;
+import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 
 import javax.inject.Inject;
@@ -13,12 +15,12 @@ import javax.inject.Inject;
         loadWhenOutdated = true,
         enabledByDefault = false
 )
-
-public class DropLoggerPlugin {
+//@Slf4j
+public class DropLoggerPlugin extends Plugin {
     @Inject
     private DropLoggerConfig config;
 
-    if (config.shouldLog()) {
+    if (config.getShouldLog()) {
         System.out.println("Plugin is on");
         // Do something here when enabled/true
     } else {

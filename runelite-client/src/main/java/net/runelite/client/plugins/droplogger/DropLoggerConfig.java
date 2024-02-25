@@ -10,12 +10,14 @@ import net.runelite.client.config.ConfigItem;
 public interface DropLoggerConfig extends Config {
 
     @ConfigItem (
-            position = 1,
             keyName = "shouldLog",
             name = "Should Log",
             description = "Checkbox to turn logging on and off."
     )
-    default boolean shouldLog() { return false; }
+    default boolean getShouldLog()
+    {
+        return false;
+    }
 
 
 }
