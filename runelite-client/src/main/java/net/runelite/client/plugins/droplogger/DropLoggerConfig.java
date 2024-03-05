@@ -9,7 +9,7 @@ import net.runelite.client.config.ConfigItem;
 @ConfigGroup("droplogger")
 public interface DropLoggerConfig extends Config {
 
-    @ConfigItem (
+    @ConfigItem(
             keyName = "shouldLog",
             name = "Should Log",
             description = "Checkbox to turn logging on and off."
@@ -18,6 +18,23 @@ public interface DropLoggerConfig extends Config {
     {
         return false;
     }
+
+    @ConfigItem(
+            keyName = "dropsData",
+            name = "",
+            description = "",
+            hidden = true
+    )
+    default String dropsData()
+    {
+        return "";
+    }
+    @ConfigItem(
+            keyName = "dropsData",
+            name = "",
+            description = ""
+    )
+    void dropsData(String str);
 
 
 }
