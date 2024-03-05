@@ -82,10 +82,7 @@ public class GlassTrackPlugin extends Plugin
             }
             session.increaseProductsMade();
         }
-        else if (event.getMessage().startsWith("You heat the sand "))
-        {
-            session.increaseMoltenGlassMade();
-        }
+
 
     }
 
